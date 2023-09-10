@@ -15,7 +15,7 @@ const ResearchSearchBar = ({
         type="text"
         placeholder="Search for symbol or company"
         className={
-          "h-12 w-[60%] px-4 py-2 border border-primary rounded-l-md focus:outline-none " +
+          "h-12 w-3/5 px-4 py-2 border border-primary rounded-l-md focus:outline-none " +
           inputClassName
         }
         {...props}

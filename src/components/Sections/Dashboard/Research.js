@@ -51,26 +51,26 @@ const Research = () => {
       return false;  // Not authenticated
     }
     return true;  // Authenticated
-};
+  };
 
 
   return (
-    <div className={`${inter.className} w-[60%] p-8 bg-[#F7F8F9] h-[120vh]`}>
+    <div className={`${inter.className} w-full md:w-3/5 p-8 bg-[#F7F8F9]`}>
       {showFlashMessage && (
-        <div className="fixed top-30 left-20 w-[60%] bg-red-600 border-l-4 border-red-800 p-4 flex justify-between items-center shadow-lg rounded-md">
+        <div className="fixed top-30 left-20 w-3/5 bg-red-600 border-l-4 border-red-800 p-4 flex justify-between items-center shadow-lg rounded-md">
           <div className="flex items-center">
-          <button className="cursor-pointer mr-2" onClick={() => setShowFlashMessage(false)}>
-           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-           </svg>
-          </button>
-        <span className="text-white font">Kindly Sign Up To Proceed Further, No Credit Card Needed !</span>
-      </div>
-      <button className="text-red-200 hover:text-red-100 transition duration-150" onClick={() => setShowFlashMessage(false)}>Close</button>
+            <button className="cursor-pointer mr-2" onClick={() => setShowFlashMessage(false)}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            <span className="text-white font">Kindly Sign Up To Proceed Further, No Credit Card Needed !</span>
+          </div>
+          <button className="text-red-200 hover:text-red-100 transition duration-150" onClick={() => setShowFlashMessage(false)}>Close</button>
         </div>
       )}
 
-      <div className="">
+      <div className="mb-8 md:mt-0">
         <h1 className="text-2xl text-gray-800 font-bold ">
           Research the company in the style of
         </h1>
@@ -82,7 +82,7 @@ const Research = () => {
       </div>
       {RESEARCH_CARDS_ARRAY.map((v, i) => (
         <div className="my-5" key={i} onClick={() => { handleCardClick() && router.push(v.link) }}>
-          <ResearchCard data={v} titleClass="cursor-pointer"/>
+          <ResearchCard data={v} titleClass="cursor-pointer" />
         </div>
       ))}
     </div>
@@ -93,7 +93,7 @@ export default Research;
 
 
 
-//previous code 
+//previous code
 // import ResearchCard from "@/components/Cards/ResearchCard";
 // import GPT_ICON from "@/../public/assets/Icons/gpt.png";
 // import NOTE_ICON from "@/../public/assets/Icons/note.png";
@@ -151,7 +151,7 @@ export default Research;
 
 
 //   return (
-//     <div className={`${inter.className} w-[60%] p-8 bg-[#F7F8F9] h-[92vh]`}>
+//     <div className={`${inter.className} w-3/5 p-8 bg-[#F7F8F9] h-[92vh]`}>
 //       {showFlashMessage && (
 //         <div className="fixed top-0 left-0 w-full bg-red-500 text-white p-4 flex justify-between">
 //           <span>Please log in first.</span>

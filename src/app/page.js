@@ -69,9 +69,9 @@ export default function Home() {
           gtag('config', 'G-K1WFKY4JMH', { send_page_view: false }); // Disable automatic page view tracking
         `}
       </Script>
-      
+
       <Header modalContainer={mainref} />
-      <div className="w-100 h-[92vh] flex">
+      <div className="w-100 flex flex-col md:flex-row">
         <Research />
         <AAPL />
       </div>

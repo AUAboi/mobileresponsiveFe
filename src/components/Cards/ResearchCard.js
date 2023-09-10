@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const ResearchCard = ({ data, titleClass }) => {
   return (
-    <div className="flex gap-10 w-[50%] relative h-full">
-      <div className="max-w-unset-imp rounded-sm flex items-center justify-center">
+    <div className="flex gap-4 sm:gap-10 md:w-1/2 relative h-full">
+      <div className="max-w-unset-imp rounded-sm flex items-start md:items-center justify-center">
         <Image
           src={data.image}
           alt={data.title}

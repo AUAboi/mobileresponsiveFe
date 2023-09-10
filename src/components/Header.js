@@ -53,7 +53,7 @@ const SCREENS_ARRAY = [
 ];
 const Header = ({ modalContainer }) => {
   const router = useRouter();
-  const currentPage = usePathname();3
+  const currentPage = usePathname(); 3
   const { isAuthenticated, storeToken } = useAuth();
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -101,7 +101,7 @@ const Header = ({ modalContainer }) => {
   ReactModal.setAppElement(modalContainer?.current);
   return (
     <nav
-      className={`${jakarta.className} h-[8vh]  flex items-center justify-between bg-primary px-[60px]`}
+      className={`${jakarta.className} sm:h-[8vh] flex flex-col sm:flex-row items-center justify-between bg-primary px-[60px] py-2 sm:py-0`}
     >
       <div className="flex items-center gap-6">
         <Image src={LOGO_IMAGE} className="h-[48px] w-[48px]" alt="LOGO" />
@@ -111,11 +111,10 @@ const Header = ({ modalContainer }) => {
             {SCREENS_ARRAY.map((v) => (
               <Link href={v.link} key={v.link}>
                 <button
-                  className={`${
-                    v.link === currentPage
-                      ? "bg-white text-primary"
-                      : "bg-primary text-white"
-                  } min-w-fit px-4  text-base font-bold h-11 rounded-md`}
+                  className={`${v.link === currentPage
+                    ? "bg-white text-primary"
+                    : "bg-primary text-white"
+                    } min-w-fit px-4  text-base font-bold h-11 rounded-md`}
                 >
                   {v.title}
                 </button>

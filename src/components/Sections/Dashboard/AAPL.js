@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const AAPL = () => {
   return (
-    <div className="w-[40%] bg-white  text-black p-9  h-[120vh]">
+    <div className="md:w-2/5 bg-white text-black p-0 sm:p-4 md:p-9">
       <Image
         src={gifPath}
         alt="explanation gif"
         loading="lazy"
         className="w-full h-[80vh] object-contain"
-        style={{maxWidth: "unset", }}
+        style={{ maxWidth: "unset", }}
       />
     </div>
   );
