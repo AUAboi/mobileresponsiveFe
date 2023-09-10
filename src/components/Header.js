@@ -123,10 +123,10 @@ const Header = ({ modalContainer }) => {
           </div>
         )}
       </div>
-      <div className="flex">
+      <div className="fixed md:static w-full md:w-[unset] bottom-0 left-0 z-50 flex">
         {isLoggedIn ? (
           <button
-            className="bg-white text-primary text-base font-bold w-24 h-11 rounded-md"
+            className="bg-white text-primary text-base font-bold w-full md:w-24 h-11 rounded-md"
             onClick={logout}
           >
             Log Out
@@ -140,7 +140,7 @@ const Header = ({ modalContainer }) => {
             </Link>
           ) : (
             <button
-              className="bg-white text-primary text-base font-bold w-36 h-11 rounded-md"
+              className="bg-white text-primary text-base font-bold w-full md:w-36 h-11 rounded-md"
               onClick={openModal}
             >
               Sign Up For Free
