@@ -140,7 +140,7 @@ const Header = ({ modalContainer }) => {
             </Link>
           ) : (
             <button
-              className="bg-white text-primary text-base font-bold w-full md:w-36 h-11 rounded-md"
+              className="bg-primary text-white md:bg-white md:text-primary text-base font-bold w-full md:w-36 h-11 md:rounded-md"
               onClick={openModal}
             >
               Sign Up For Free
